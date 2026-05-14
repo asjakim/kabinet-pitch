@@ -244,8 +244,20 @@
 
     .matrix-wrap {
       position: relative;
-      padding: 20px 42px 50px;
+      padding: 0;
       margin-top: 46px;
+    }
+
+    .matrix-label-top,
+    .matrix-label-bottom {
+      color: var(--soft);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      white-space: normal;
+      font-weight: 760;
+      text-align: center;
+      margin: 18px 0;
     }
 
     .matrix {
@@ -279,25 +291,7 @@
 
     .matrix-axis-y,
     .matrix-axis-x {
-      position: absolute;
-      color: var(--soft);
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      white-space: nowrap;
-      font-weight: 700;
-    }
-
-    .matrix-axis-y {
-      left: -38px;
-      top: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-    }
-
-    .matrix-axis-x {
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
+      display: none;
     }
 
     .dark-section {
@@ -575,15 +569,13 @@
 
       .nav-links { display: none; }
       .hero-visual { height: 420px; }
-      .matrix-wrap { padding: 0 0 44px; }
+      .matrix-wrap { padding: 0; }
       .matrix { grid-template-columns: 1fr; min-height: auto; }
-      .matrix-axis-y { display: none; }
-      .matrix-axis-x {
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
+      .matrix-label-top,
+      .matrix-label-bottom {
         font-size: 10px;
         letter-spacing: 1px;
+        line-height: 1.35;
       }
     }
 
@@ -665,7 +657,7 @@
       </div>
 
       <div class="matrix-wrap">
-        <div class="matrix-axis-y">← Масс-маркет / Кураторский отбор →</div>
+        <div class="matrix-label-top">Вертикаль: от масс-маркета к кураторскому отбору</div>
         <div class="matrix">
           <div class="matrix-quad">
             <h4>Кураторский масс-маркет</h4>
@@ -688,7 +680,7 @@
             <p>ЦУМ, Touch of Modern. Дорого и узнаваемо, но часто без ощущения частного отбора и личного маршрута.</p>
           </div>
         </div>
-        <div class="matrix-axis-x">← Банальные подарки / Статусные объекты →</div>
+        <div class="matrix-label-bottom">Горизонталь: от банальных подарков к статусным объектам</div>
       </div>
     </div>
   </section>
